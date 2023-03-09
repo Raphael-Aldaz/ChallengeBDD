@@ -37,7 +37,7 @@ public class ArticlesDao<T> implements Dao<ArticlesModele> {
 	@Override
 	public ArrayList<ArticlesModele> readAll() {
 		ArrayList<ArticlesModele> list = new ArrayList<>();
-		 String querySql = "SELECT IdArticle, Description, Brand, Price, CatName, Quantity   FROM T_Articles INNER JOIN T_Category on 		T_Articles.IdCategory = T_Category.IdCategory";
+		 String querySql = "SELECT * from T_Articles";
 			try(Statement statement = connection.createStatement()){
 				PreparedStatement myQuery = connection.prepareStatement(querySql);
 				try(ResultSet resultSet = myQuery.executeQuery()){

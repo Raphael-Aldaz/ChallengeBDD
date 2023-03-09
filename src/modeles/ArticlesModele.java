@@ -5,10 +5,10 @@ public class ArticlesModele {
 	private String Description;
 	private String Brand;
 	private double Price;
-	private int category;
+	private String category;
 	private int quantity;
 	
-	public ArticlesModele(int articleId, String description, String brand, double price, int category, int quantity) {
+	public ArticlesModele(int articleId, String description, String brand, double price, String category, int quantity) {
 
 		this.articleId = articleId;
 		this.Description = description;
@@ -17,14 +17,7 @@ public class ArticlesModele {
 		this.category = category;
 		this.quantity = quantity;
 	}
-	public ArticlesModele(int articleId, String Description, String Brand, double Price, String CatName, int quantity) {
-		this.articleId = articleId;
-		this.Description = Description;
-		this.Brand = Brand;
-		this.Price = Price;
-		this.category = category;
-		this.quantity = quantity;
-	}
+	
 	public int getArticleId() {
 		return articleId;
 	}
@@ -49,10 +42,10 @@ public class ArticlesModele {
 	public void setPrice(double price) {
 		this.Price = price;
 	}
-	public int getCategory() {
+	public String getCategory() {
 		return category;
 	}
-	public void setCategory(int category) {
+	public void setCategory(String category) {
 		this.category = category;
 	}
 	public int getQuantity() {
@@ -65,7 +58,7 @@ public class ArticlesModele {
 	@Override
 	public String toString() {
 		return "Modele [articleId=" + articleId + ", Description=" + Description + ", Brand=" + Brand + ", price="
-				+ Price + ", category=" + category + ", quantity=" + quantity + "]";
+				+ Price + ", category=" + category + ", quantity=" + quantity + "] \n";
 	}
 
 }
